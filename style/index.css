@@ -3,6 +3,10 @@
   padding: 80px;
 }
 
+.logo-accueil{
+  width: 250px ;
+}
+
 .accueil-photos h2 {
   color: #242424;
   text-align: center;
@@ -42,23 +46,62 @@
   text-align: center;
   margin-bottom: 50px;
 }
+
+.section-contact h4 {
+  color :#a5b4fc;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: lighter;
+}
+
 form{
   max-width: 1000px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 40%;
+  width: 50%;
   color: white;
 }
 .form-nom-email{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   margin-bottom: 20px;
 }
 .form-column{
+  width: 150px;
+  border-top: 50px;
   display: flex;
   flex-direction: column;
-  margin-right: 15px;
+  margin-right: 20px;
+}
+
+.input-nom {
+  block-size: 20px;
+  background-color:#1f2039;
+  border-width: 2px;
+  border-style: solid;
+  border-color:#a5b4fc;
+}
+
+.textarea{
+  background-color: #1f2039;
+  border-color: #a5b4fc;
+  border-width: 2px;
+  border-style: solid;
+}
+
+::placeholder {
+  color: #5d6799;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.input-mail{
+  block-size: 20px;
+  border-style: solid;
+  border-color: #a5b4fc;
+  border-width: 2px;
+  background-color: #1f2039 ;
 }
 input[type='submit'] {
   width: 200px;
@@ -66,10 +109,10 @@ input[type='submit'] {
   margin-top: 30px;
 }
 input{
-  border-radius: 5px;
+  border-radius: 10px;
 } 
 textarea{
-  border-radius: 10px;
+  border-radius: 15px;
 }
 @media screen and (max-width: 996px) {
   .accueil-introduction {

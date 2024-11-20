@@ -10,12 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/icon.png">
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="images/logo.png" alt="Logo Robbie Lens" >
+            <img class="logo-accueil" src="images/logo-off.png" alt="Logo Ottawa development" >
             <div>
                 <a href="index.html">Accueil</a>
                 <a href="a-propos.html">À propos</a>
@@ -26,13 +27,12 @@
     <main>
         <section class="accueil-introduction">
             <div>
-                <h1>Robbie Lens Photographie</h1>
+                <h1>Ottawa developpement</h1>
                 <p>
-                    Où <em>professionalisme</em> s’allie avec <em>passion</em>. Depuis
-                    plus de 5 ans maintenant, j’exerce mon métier avec la passion
-                    qui m’anime : capturer l’essence de chaque instant.
+                    Chez <em>Ottawa Development</em>, nous sommes passionnés par l'<em>innovation</em> et la <em>création</em> de solutions sur mesure. Spécialisés dans le <em>développement web, mobile et logiciel</em>, nous accompagnons nos clients à <em>chaque étapes de leurs projets</em>, de la conception à la réalisation. Située au cœur de l'<em>essor technologique</em>, notre entreprise mise sur une approche <em>collaborative</em> et des technologies de pointe pour transformer vos idées en <em>réussite concrète</em>.
+                    Que vous soyez une startup ambitieuse ou une entreprise bien établie, Ottawa Développement est votre <em>partenaire de confiance</em> pour relever les <em>défis numériques</em> et <em>stimuler</em> votre croissance.
                 </p>
-                <a href="#contact" class="cta">UN PROJET ? ÉCRIVEZ-MOI</a>
+                <a href="#contact" class="cta">D'AUTRES QUESTIONS ? CONTACTEZ NOUS</a>
             </div>
             <img src="images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens" >
         </section>
@@ -50,20 +50,21 @@
             </div>
         </section>
         <section id="contact" class="section-contact">
-            <h2>Parlons de votre projet</h2>
+            <h2>DES QUESTIONS OU UN COMMENTAIRE ?</h2>
+            <h4>Vous pouvez obtenir plus d'informations ou envoyer vos commentaires en remplissant la section ci-dessous.</h4>
             <form method="get" action="">
                 <div class="form-nom-email">
                     <div class="form-column">
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" >
+                        <label for="nom"></label>
+                        <input class="input-nom" type="text" name="nom" id="nom" placeholder="Votre nom" >
                     </div>
                     <div class="form-column">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" >
+                        <label for="email"></label>
+                        <input class="input-mail" type="email" name="email" id="email" placeholder="Email@exemple.com">
                     </div>
                 </div>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="10"></textarea>
+                <label for="message"></label>
+                <textarea class="textarea" name="message" id="message" rows="10" placeholder="Votre message"></textarea>
                 <input type="submit" value="ENVOYER" class="cta" >
             </form>
         </section>
