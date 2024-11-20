@@ -1,77 +1,93 @@
-img{
-    width: 40%;
-    height: 40%;
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
 }
-.section-service {
-    background-color: white;
+/* Section des services */
+.services {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #007bff;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        max-width: 90%;
+    }
+}
+
+footer {
     display: flex;
     flex-direction: column;
-  }
-  h2,p{
-    color: black;
-  }
-  
-  .agencement{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .portfolio-section-photos h2 {
-    color: #242424;
-    margin-bottom: 80px;
-  }
-  
-  .grid-paysages {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px 300px;
-    gap: 15px;
-  }
-  
-  .grid-portraits {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
-    gap: 15px;
-  }
-  
-  .grid-paysages img,
-  .grid-portraits img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .lien-conteneur-photo {
-    position: relative;
-  }
-  
-  .photo-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
+    padding: 20px 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-  }
-  
-  .lien-conteneur-photo:hover .photo-hover {
-    display: flex;
-  }
-  @media screen and (max-width: 996px) {
-    .grid-paysages{
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-    .grid-portraits{
-      grid-template-columns: 1fr;
-      gap:15px;
-    }
-    
-  }
+    text-align: center;
+}
+
+footer .lien-icone img {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+    margin: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+footer .lien-icone img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a img[alt="Logo Robbie Lens"] {
+    width: 80px; /* Taille du logo principal */
+    margin-bottom: 20px;
+}
