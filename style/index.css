@@ -1,7 +1,5 @@
 
-.methodologie-dev{
-  padding-top: 130px;
-  }
+
 
 .logo-accueil{
   width: 100px ;
@@ -44,6 +42,7 @@
   height: 600px;
   align-items: flex-start;
   margin: auto;
+  align-items: center;
 }
 
 .accueil-introduction h1 {
@@ -56,6 +55,8 @@
   margin-bottom: 30px;
   padding-right: 50px;
 }
+
+.methodologie-dev
 
 .cta{
   margin-top: 30px;
