@@ -2,11 +2,13 @@
 
 
 .logo-accueil{
-  width: 100px ;
+  width: 5em;
+  height: 5em;
+
 }
 
 .accueil-liste {
-  background-color: white;
+  background-color: #fff5f0;
   align-items: center;
 }
 
@@ -35,7 +37,7 @@
 
 
 .accueil-introduction {
-  background-image: linear-gradient(90deg, #1a1c31 30%, #40437a 70%);
+  background-image: linear-gradient(90deg, #1a1c31 40%, #2e317b 70%);
   display: flex;
   flex-direction: row;
   height: 600px;

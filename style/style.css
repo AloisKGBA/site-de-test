@@ -99,7 +99,8 @@ footer {
 
 
 .lien-icone {
-  margin-left: 30px;
+  margin-left: 20px;
+  transition: 300ms;
 }
 
 .lien-icone:hover {
@@ -148,5 +149,8 @@ nav a {
   nav a {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .lien-icone{
+    max-width: 100px;
   }
 }
