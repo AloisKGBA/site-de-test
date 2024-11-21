@@ -18,7 +18,7 @@
 }
 
 .a-propos-main {
-  width: 100%;
+  width: 75%;
   margin: auto;
 }
 td,th{
@@ -64,4 +64,23 @@ th{
 }
 h2{
   font-size: 2em;
+}
+.cta {
+  display: inline-block;
+  background: transparent;
+  border-style: solid;
+  border-color:#a5b4fc;
+  color: #a5b4fc;
+  border-radius: 50px;
+  padding: 20px 50px;
+  cursor: pointer;
+  transition: background-color 300ms, 300ms, 300ms;
+  transition: 300ms ease;
+}
+
+.cta:hover {
+ color:black;
+ background-color: white;
+ border-color: white;
+ scale: 1.05;
 }
