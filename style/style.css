@@ -88,8 +88,19 @@ footer {
   color: #a5b4fc;
 }
 
+.service {
+  color: black;
+  transition: color 200ms;
+}
+
+.service:hover {
+  color: #a5b4fc;
+}
+
+
 .lien-icone {
-  margin-left: 30px;
+  margin-left: 20px;
+  transition: 300ms;
 }
 
 .lien-icone:hover {
