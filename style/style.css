@@ -42,19 +42,50 @@ footer {
 
 .cta {
   display: inline-block;
-  background: linear-gradient(#8e86b5, #acaeed);
-  color: white;
+  background: transparent;
+  border-style: solid;
+  border-color:#a5b4fc;
+  color: #a5b4fc;
   border-radius: 50px;
   padding: 20px 50px;
-}
-
-a:hover {
-  text-decoration: underline;
+  cursor: pointer;
+  transition: background-color 300ms, 300ms, 300ms;
+  transition: 300ms ease;
 }
 
 .cta:hover {
-  background: linear-gradient(#696484, #8788ba);
-  text-decoration: none;
+ color:black;
+ background-color: white;
+ border-color: white;
+ scale: 1.05;
+}
+
+.accueil {
+  color: black;
+  transition: 200ms;
+}
+
+.accueil:hover {
+  color: #a5b4fc;
+  animation-name: fondu;
+  animation-duration: 1s;
+}
+
+.à-propos {
+  color: black;
+  transition: color 200ms;
+}
+.à-propos:hover{
+  color:#a5b4fc;
+}
+
+.portfolio{
+  color: black;
+  transition: color 200ms;
+}
+
+.portfolio:hover{
+  color: #a5b4fc;
 }
 
 .lien-icone {

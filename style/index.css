@@ -1,41 +1,78 @@
-.accueil-photos {
-  background-color: white;
-  padding: 80px;
-}
+
+.methodologie-dev{
+  padding-top: 130px;
+  }
 
 .logo-accueil{
   width: 250px ;
 }
 
-.accueil-photos h2 {
-  color: #242424;
-  text-align: center;
-  margin-bottom: 80px;
+.accueil-liste {
+  background-color: white;
+  align-items: center;
 }
 
-.accueil-photos div {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 15px;
+.accueil-liste h2 {
+  font-size: 200%;
+  color: #40437a;
+  text-align: center;
+  padding-bottom: 50px;
 }
+
+.accueil-liste h4 {
+  color: #40437a;
+  padding-left: 165px ;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 120%;
+}
+
+.accueil-liste li {
+  color:#5d6799;
+  padding-left: 100px;
+  list-style-position: inside;
+}
+
+
+
+
 
 .accueil-introduction {
+  background-image: linear-gradient(90deg, #1a1c31 30%, #40437a 70%);
   display: flex;
   flex-direction: row;
-  width: 60%;
+  height: 600px;
   align-items: flex-start;
   margin: auto;
 }
 
 .accueil-introduction h1 {
   max-width: 1000px;
-  margin-bottom: 15px;
+  animation-name: fondu;
+  animation-duration: 1s;
+  padding-top: 90px;
+}
+
+@keyframes fondu {
+  0%{
+    opacity: 0%;
+
+  }
+  100%{
+    opacity: 100%;
+  }
 }
 
 .accueil-introduction p {
+  margin-top: 40px ;
   margin-bottom: 30px;
+  padding-right: 500px;
+  animation-name: fondu;
+  animation-duration: 1s;
+}
+
+.cta{
+  margin-top: 30px;
 }
 
 .accueil-introduction div {
@@ -77,6 +114,7 @@ form{
 
 .input-nom {
   block-size: 20px;
+  width: 150px;
   background-color:#1f2039;
   border-width: 2px;
   border-style: solid;
@@ -94,9 +132,11 @@ form{
   color: #5d6799;
   padding-left: 5px;
   padding-top: 5px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .input-mail{
+  width: 150px;
   block-size: 20px;
   border-style: solid;
   border-color: #a5b4fc;
@@ -110,6 +150,8 @@ input[type='submit'] {
 }
 input{
   border-radius: 10px;
+  border-style: solid;
+  border-style: none;
 } 
 textarea{
   border-radius: 15px;
