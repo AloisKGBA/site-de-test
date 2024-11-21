@@ -37,7 +37,7 @@
 
 
 .accueil-introduction {
-  background-image: linear-gradient(90deg, #1a1c31 40%, #2e317b 70%);
+  background-image: linear-gradient(90deg, #1a1c31 30%, #2f316f 70%);
   display: flex;
   flex-direction: row;
   height: 600px;
