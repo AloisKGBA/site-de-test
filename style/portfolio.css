@@ -1,75 +1,94 @@
-.portfolio-section-photos {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+/* Style de base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f4f4f9;
 }
 
-.portfolio-section-photos h2 {
-  color: #242424;
-  margin-bottom: 80px;
+header {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 2rem 1rem;
 }
 
-.grid-paysages {
+main {
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Section Projets */
+#projects {
+  text-align: center;
+}
+
+.project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 300px 300px;
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.grid-portraits {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 300px;
-  gap: 15px;
+.project {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.grid-paysages img,
-.grid-portraits img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.lien-conteneur-photo {
-  position: relative;
+.project img {
+  max-width: 100%;
+  border-radius: 8px;
 }
 
-.photo-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+/* Section CV */
+#cv-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.cv-grid {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: 1.5em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
+  gap: 1rem;
 }
 
-.lien-conteneur-photo:hover .photo-hover {
-  display: flex;
-}
-@media screen and (max-width: 996px) {
-  .grid-paysages{
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .grid-portraits{
-    grid-template-columns: 1fr;
-    gap:15px;
-  }
-  
+.cv-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
-img{
-  width: 30%;
-  height: 30%;
+.cv-card:hover {
+  background-color: #333;
+  color: #fff;
 }
-.agencement{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
 }
