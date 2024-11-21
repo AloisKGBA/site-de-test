@@ -142,7 +142,7 @@ input{
 textarea{
   border-radius: 15px;
 }
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1160px) {
   .accueil-introduction {
     flex-direction: column;
     align-items: center;

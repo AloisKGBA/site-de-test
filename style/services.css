@@ -47,16 +47,6 @@
 }
 
 
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 10px;
-    background: white;
-    color: white;
-    text-align: center;
-}
-
 footer .lien-icone img {
     width: 40px; /* Taille des icônes */
     height: 40px;

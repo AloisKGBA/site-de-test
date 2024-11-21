@@ -1,35 +1,4 @@
-/* Style de base */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background: #f4f4f9;
-}
 
-header {
-  text-align: center;
-  background: #333;
-  color: #fff;
-  padding: 2rem 1rem;
-}
-
-main {
-  padding: 2rem 1rem;
-}
-
-h1, h2, h3 {
-  margin: 0.5rem 0;
-}
-
-p {
-  line-height: 1.6;
-}
-
-/* Section Projets */
-#projects {
-  text-align: center;
-}
 
 .project-grid {
   display: grid;
@@ -83,12 +52,18 @@ p {
   background-color: #333;
   color: #fff;
 }
+p{
+  color: black;
+}
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #333;
-  color: #fff;
-  margin-top: 2rem;
+.titre p{
+  color: #f9f8ff;
+}
+.carre-contenu {
+  border-top: 1px solid #8e86b5;
+  border-left: 1px solid #8e86b5;
+  padding: 50px;
+}
+.sect-p{
+  padding-top: 80px, 0px;
 }
