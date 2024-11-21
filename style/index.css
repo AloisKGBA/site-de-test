@@ -4,7 +4,7 @@
   }
 
 .logo-accueil{
-  width: 250px ;
+  width: 100px ;
 }
 
 .accueil-liste {
@@ -48,27 +48,13 @@
 
 .accueil-introduction h1 {
   max-width: 1000px;
-  animation-name: fondu;
-  animation-duration: 1s;
-  padding-top: 90px;
 }
 
-@keyframes fondu {
-  0%{
-    opacity: 0%;
-
-  }
-  100%{
-    opacity: 100%;
-  }
-}
 
 .accueil-introduction p {
   margin-top: 40px ;
   margin-bottom: 30px;
-  padding-right: 500px;
-  animation-name: fondu;
-  animation-duration: 1s;
+  padding-right: 50px;
 }
 
 .cta{

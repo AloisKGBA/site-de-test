@@ -1,0 +1,124 @@
+.intro {
+    text-align: left;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+/* Section des services */
+.services {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #007bff;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+}
+
+footer .lien-icone img {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+    margin: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+footer .lien-icone img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a img[alt="Logo Robbie Lens"] {
+    width: 80px; /* Taille du logo principal */
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+
+@media (min-width: 1024px) {
+    .services {
+        gap: 80px;
+        padding: 40px;
+    }
+}
+
+/* Moyen écran (tablettes) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .services {
+        gap: 50px;
+    }
+
+    .service-card {
+        max-width: 350px;
+    }
+}
+
+/* Petit écran (smartphones) */
+@media (max-width: 767px) {
+    .intro {
+        padding: 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .service-card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    footer .lien-icone img {
+        width: 30px;
+        height: 30px;
+    }
+}
