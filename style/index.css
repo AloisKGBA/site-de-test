@@ -34,7 +34,6 @@
 
 
 
-
 .accueil-introduction {
   background-image: linear-gradient(90deg, #1a1c31 30%, #40437a 70%);
   display: flex;
@@ -55,8 +54,6 @@
   margin-bottom: 30px;
   padding-right: 50px;
 }
-
-.methodologie-dev
 
 .cta{
   margin-top: 30px;
@@ -156,10 +153,11 @@ textarea{
     order: 2;
   }
 
-  .accueil-introduction img {
+  .methodologie-dev {
     order: 1;
     margin-bottom: 20px;
     width: 100%;
+    max-width: 400px;
   }
 
   .accueil-photos {
