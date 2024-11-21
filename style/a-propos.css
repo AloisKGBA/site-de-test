@@ -18,7 +18,7 @@
 }
 
 .a-propos-main {
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 td,th{
@@ -31,7 +31,6 @@ table{
   margin-bottom: 180px;
   margin-top: 20px;
   color: white;
-  display: none;
 }
 caption{
   font-size: 2em;
@@ -42,4 +41,27 @@ td{
 }
 th{
   padding: 20px;
+}
+.section-equipe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+  padding-right: 0px; 
+  width: 100%;
+}
+.equipe{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.pdp{
+  height: 25%;
+  width: 30%;
+}
+h2{
+  font-size: 2em;
 }
