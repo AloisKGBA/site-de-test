@@ -150,7 +150,8 @@ nav a {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .lien-icone{
-    max-width: 100px;
-  }
+}
+.logo-accueil{
+  width: 5em;
+  height: 5em;
 }
