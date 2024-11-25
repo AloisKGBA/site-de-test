@@ -4,7 +4,11 @@
   padding: 50px;
   margin-bottom: 80px;
 }
-
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .carre-contenu h2 {
   margin-top: 30px;
 }
@@ -24,14 +28,7 @@
 td,th{
   border: 1px solid #8e86b5;
 }
-table{
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 180px;
-  margin-top: 20px;
-  color: white;
-}
+
 caption{
   font-size: 2em;
   padding-bottom: 20px;
@@ -45,22 +42,27 @@ th{
 .section-equipe{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding-left: 0px;
-  padding-right: 0px; 
+  padding: 80px ;
   width: 100%;
 }
 .equipe{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: 20px;
+  align-items: flex-start;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 800px;
+  height: auto;
+}
+.equipe div{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .pdp{
-  height: 25%;
-  width: 30%;
+  width: 15em;
+  height: auto;
 }
 h2{
   font-size: 2em;
@@ -83,4 +85,11 @@ h2{
  background-color: white;
  border-color: white;
  scale: 1.05;
+}
+.profession{
+  font-size: 2em;
+  color: #a5b4fc;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  text-decoration: underline;
 }

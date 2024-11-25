@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style/style.css" rel="stylesheet" >
     <link href="style/services.css" rel="stylesheet" >
+    <script type="text/javascript" src="service.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@
         </section>
 
         <section class="intro">
-            <div class="presentation">
+            <div>
                 <h1>Des services sur mesure</h1>
                 <p>Explorez comment nous pouvons transformer vos idées en solutions digitales innovantes et personnalisées.</p>    
             </div>
@@ -43,17 +44,26 @@
             <div class="service-card">
                 <img src="/images/portfolio/paysage1.jpg" alt="Création de site personnalisé">
                 <h2>Création de sites personnalisés</h2>
-                <p>Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
+                    <div class="Texte-more">
+                        <p id="moreText1" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
+                        <button id="viewMoreBtn1" onclick="toggleText('1')">Voir plus</button>
+                    </div>
             </div>
             <div class="service-card">
                 <img src="/images/portfolio/paysage1.jpg" alt="Solutions e-commerce">
                 <h2>Solutions E-commerce</h2>
-                <p>Développez votre boutique en ligne avec des fonctionnalités modernes et une expérience utilisateur optimale.</p>
+                <div class="Texte-more">
+                    <p id="moreText2" style="display: none;">Développez votre boutique en ligne avec des fonctionnalités modernes et une expérience utilisateur optimale.</p>
+                    <button id="viewMoreBtn2" onclick="toggleText('2')">Voir plus</button>
+                </div>
             </div>
             <div class="service-card">
                 <img src="/images/portfolio/paysage1.jpg" alt="Maintenance et support">
                 <h2>Maintenance et Support</h2>
-                <p>Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
+                <div class="Texte-more">
+                    <p id="moreText3" style="display: none;">    Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
+                    <button id="viewMoreBtn3" onclick="toggleText('3')">Voir plus</button>
+                </div>
             </div>
         </section>
     </main>
@@ -65,10 +75,10 @@
           alt="Logo Ottawa Development"
         />
         <div>
-          <a target="_blank" href="https://twitter.com/" class="lien-icone">
+          <a target="_blank" href="https://x.com/OtawaDev" class="lien-icone">
             <img src="images/twitter.png" alt="Logo Twitter" />
           </a>
-          <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
+          <a target="_blank" href="https://www.instagram.com/otawadev/?igsh=MWF6dG1hOHh1ejhsaw%3D%3D&utm_source=qr" class="lien-icone">
             <img src="images/instagram.png" alt="Logo Instagram" />
           </a>
         </div>

@@ -3,6 +3,27 @@
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
 }
+
+#viewMoreBtn1,#viewMoreBtn2,#viewMoreBtn3 {
+    display: inline-block;
+    background-color: #651dd1;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 150px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+#viewMoreBtn1:hover,#viewMoreBtn2:hover,#viewMoreBtn3:hover{
+    background-color: rgb(185, 20, 135);
+}
 /* Section des services */
 .services {
     background-color: aliceblue;
