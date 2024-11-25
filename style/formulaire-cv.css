@@ -1,0 +1,81 @@
+.formulaire{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 40%;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+form input{
+    padding: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 50px;
+}
+.nomprenom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    
+}
+.nomprenom input{
+    width: 97%;
+    margin-top: 10px
+}
+.select{
+    border-radius: 10px;
+    padding: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 10px;
+    border: 1px solid black;
+}
+label{
+    display: flex;
+    align-items: center;
+    gap : 10px;
+}
+.controle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    
+}
+.checkbox_cont{
+    display: flex;
+    flex-direction: column; 
+}
+.carré{
+    display: flex;
+    align-items: center;
+}
+.bouton input{
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    padding: auto;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+
+}
+.select input{
+    width: 24px;
+    height: 24px;
+}
+.error{
+    color: red;
+    display: none;
+}
+.active{
+    display: flex;
+}
+.deactive{
+    display: none;
+}

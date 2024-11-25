@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Groupe 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style/style.css" rel="stylesheet" >
+    <link href="../style/portfolio.css" rel="stylesheet" >
+    <link href="../style/formulaire-cv.css" rel="stylesheet" >
+    <script type="text/javascript" src="../scripts/form-cv.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/Otawa_Dev_Logo.png" />
+    <script defer src="../script.js"></script>
+</head>
+
+<body>
+    <header>
+            <nav>
+                <a href="index.html" class="lien-icone">
+                    <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" alt="Logo Robbie Lens" >
+                </a>
+                <div>
+                    <a href="index.html">Accueil</a>
+                    <a href="a-propos.html">À propos</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="service.html">Services</a>
+                </div>
+            </nav>
+    </header>
+    <main>
+        <section class="titre">
+            <h1>Portfolio de l'Équipe</h1>
+            <p>Découvrez nos projets et nos talents</p>
+        </section>
+        <!-- Section Projets -->
+        <section class="sect-p" class="projects" >
+            <div class="carre-contenu">
+
+                <h2>Notre experience</h2>
+                <div class="project-grid">
+                    <div class="project">
+                        <img src="../images/portfolio/OWASP.jpg" alt="Projet 1">
+                        <h3>OWASP Bricks</h3>
+                        <p>Le projet d'OWASP Bricks à permis à notre équipe de découvire le pentest,  Nous avons pus utiliser des outils comme burp suite afin de trouver des failles et de les corrigées, Les erreurs que nous avons pus relever ont été étudier par la suite pour trouver une solution afin de sécuriser le site en question.</p>
+                    </div>
+                    <div class="project">
+                        <img src="../images/portfolio/osint.jpg" alt="Projet 2">
+                        <h3>Osint Project</h3>
+                        <p>Le projets d'Osint concernait notre intervenant, Notre mission était de se renseigner sur ses entreprises afin de retrouver un maximum d'informations sur sa vie professionel et personnel, Comme les noms de ses colaborateurs, les clients, les fournisseurs, mais aussi le nom de membres de sa famille, de ses proches.</p>
+                    </div>
+                    <div class="project">
+                        <img src="../images/portfolio/Photoweb1.png" alt="Projet 3">
+                        <h3>Développement Web</h3>
+                        <p>Dans ce projet nous créont le site web sur lequel vous êtes actuellement,Afin de s'entrainer à lire, écrire et comprendre le HTML, le CSS, et le JavaScript, Qui sont des langues de codage obligatoire à connaitre lors de la création d'un site web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section CV -->
+        <section>
+            <form method="get" action=""id="formulaire" class="formulaire">
+                <h1>
+                  Nos CV
+                </h1>
+                <div class="nomprenom">
+                  <div class="prenom">
+                    <label for="prenom"> Prénom *</label>
+                    <input type="text" name="First_name" id="prenom" required>
+                    <p class="error un">Ce champ est requis *</p>
+                  </div>
+                  <div class="nom">
+                    <label for="nom">Nom *</label>
+                    <input type="text" name="last_name" id="nom" required>
+                    <p class="error deux">Ce champ est requis *</p>
+                  </div>
+                </div>
+                <div class="choix">
+                  <p> Choisissez les cv que vous voulez voir</p>
+                  <div class="controle">
+                        <div class="select zone1">            
+                            <input type="radio" name="choix" class="botmode" value="cvalois" id="cvalois" > 
+                            <label for="cvalois">Cv de Aloïs</label>
+                        </div>
+                        <div class="select zone2" >            
+                            <input type="radio" name="choix" class="botmode" value="cvenzo" id="cvenzo" > 
+                            <label for="cvenzo">Cv de Enzo</label>
+                        </div>
+                        <div class="select zone3" >            
+                            <input type="radio" name="choix" class="botmode" value="cvjolan" id="cvjollan" > 
+                            <label for="cvjollan">Cv de Jolan</label>
+                        </div>
+                        <div class="select zone4" >            
+                            <input type="radio" name="choix" class="botmode" value="cvevan" id="cvevan" > 
+                            <label for="cvevan">Cv de Evan</label>
+                        </div>
+                        <div class="select zone5" >            
+                            <input type="radio" name="choix" class="botmode" value="cvislam" id="cvislam" > 
+                            <label for="cvislam">Cv de Islam</label>
+                        </div>
+                    </div>
+                    <p class="error trois">Veillez selectionné un fichier *</p>
+                </div>
+                <div class="checkbox_cont">
+                  <div class="carré">
+                    <input type="checkbox" name="consent" id="consent" class="consent">
+                    <label for="consent">je consent que mes nom et prénom soit enregister *</label>
+                    <p class="error quatre">pour télécharger les cv, acceptez que vos informations soit enregistrer</p>
+                  </div>
+                </div>
+                <div class="bouton">
+                  <input type="button" value="Submit" onclick="validation()">
+                </div>
+            </form>
+        </section>
+        <section class="cv-section">
+            <div class="cv-grid">   
+                <div class="cv-card" onclick="afficherPopup()">Télécharger nos cv</div>   
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img
+          class="logo-accueil"
+          src="../images/Otawa_Dev_Logo.png"
+          alt="Logo Ottawa Development"
+        />
+        <div>
+          <a target="_blank" href="https://x.com/OtawaDev" class="lien-icone">
+            <img src="../images/twitter.png" alt="Logo Twitter" />
+          </a>
+          <a target="_blank" href="https://www.instagram.com/otawadev/?igsh=MWF6dG1hOHh1ejhsaw%3D%3D&utm_source=qr" class="lien-icone">
+            <img src="../images/instagram.png" alt="Logo Instagram" />
+          </a>
+        </div>
+      </footer>
+</body>
+</html>
