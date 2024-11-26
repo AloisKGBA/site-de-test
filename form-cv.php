@@ -20,6 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($result) {
+            $sql2 = "INSERT INTO formulaire_cv (Prenom, Nom, Nom_cv) VALUES (:prenom, :nom, :choix)";
+            $stmt = $pdo->prepare($sql2);
+            $stmt->bindParam(':prenom', $prenom);
+            $stmt->bindParam(':nom', $nom);
+            $stmt->bindParam(':choix', $choix);
+            try {
+                $stmt->execute();
+                echo "Données insérées avec succès !";
+            } catch (PDOException $e) {
+                echo "<p style='color: red;'>Erreur lors de l'insertion : " . $e->getMessage() . "</p>";
+            }
             $lienCv = $result['lien_cv'];
             echo "Lien récupéré : " . $lienCv;
             echo '<br><a href="download.php?file=' . urlencode($lienCv) . '">Télécharger le CV</a>';
