@@ -1,7 +1,7 @@
 <?php
 // Connexion à la base de données
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=otawadev', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=otawadev', 'root', 'root');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo "Erreur de connexion : " . $e->getMessage();
@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = isset($_POST['Last_name']) ? trim($_POST['Last_name']) : '';
     $choix = isset($_POST['choix']) ? $_POST['choix'] : '';
     $consent = isset($_POST['consent']) ? true : false;
+    echo "le choix est :". $choix;
     if (!empty($nom) && !empty($prenom) && !empty($choix)&& !empty($consent)) {
         $sql = "SELECT lien_cv FROM cv_membre";
         $stmt = $pdo->prepare($sql);
