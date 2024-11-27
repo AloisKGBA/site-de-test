@@ -15,11 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = isset($_POST['Last_name']) ? trim($_POST['Last_name']) : '';
     $choix = isset($_POST['choix']) ? trim($_POST['choix']) : '';
     $consent = isset($_POST['consent']) ? true : false;
-<<<<<<< HEAD
-    echo "le choix est :". $choix;
-=======
-
->>>>>>> 11b9a0ef59763c94173052e50d42687f20097fae
     if (!empty($nom) && !empty($prenom) && !empty($choix)&& !empty($consent)) {
         // Récupère le lien du cv en fonction de celui choisi
         $sql = "SELECT lien_cv FROM cv_membre WHERE Prenom='$choix' ";
