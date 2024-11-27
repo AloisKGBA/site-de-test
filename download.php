@@ -18,7 +18,8 @@ if (isset($_GET['file'])) {
 
         // Lire le fichier et l'envoyer au navigateur
         readfile($filePath);
-        exit;
+        header('Location: pages/index.html'); // Remplacez 'formulaire.php' par l'URL de votre formulaire
+        exit();
     } else {
         echo "Le fichier n'existe pas.";
     }

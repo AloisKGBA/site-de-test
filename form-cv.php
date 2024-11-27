@@ -9,18 +9,26 @@ try {
 }
 
 // Récuperation info formulaire
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prenom = isset($_POST['First_name']) ? trim($_POST['First_name']) : '';
     $nom = isset($_POST['Last_name']) ? trim($_POST['Last_name']) : '';
-    $choix = isset($_POST['choix']) ? $_POST['choix'] : '';
+    $choix = isset($_POST['choix']) ? trim($_POST['choix']) : '';
     $consent = isset($_POST['consent']) ? true : false;
+<<<<<<< HEAD
     echo "le choix est :". $choix;
+=======
+
+>>>>>>> 11b9a0ef59763c94173052e50d42687f20097fae
     if (!empty($nom) && !empty($prenom) && !empty($choix)&& !empty($consent)) {
-        $sql = "SELECT lien_cv FROM cv_membre";
+        // Récupère le lien du cv en fonction de celui choisi
+        $sql = "SELECT lien_cv FROM cv_membre WHERE Prenom='$choix' ";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
         if ($result) {
+            // Insert dans la base de donnée les infos de ceux qui ont téléchargé un cv
             $sql2 = "INSERT INTO formulaire_cv (Prenom, Nom, Nom_cv) VALUES (:prenom, :nom, :choix)";
             $stmt = $pdo->prepare($sql2);
             $stmt->bindParam(':prenom', $prenom);
@@ -28,13 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':choix', $choix);
             try {
                 $stmt->execute();
-                echo "Données insérées avec succès !";
             } catch (PDOException $e) {
-                echo "<p style='color: red;'>Erreur lors de l'insertion : " . $e->getMessage() . "</p>";
             }
+
+            // Permet de télécharger le cv 
+
             $lienCv = $result['lien_cv'];
-            echo "Lien récupéré : " . $lienCv;
-            echo '<br><a href="download.php?file=' . urlencode($lienCv) . '">Télécharger le CV</a>';
+            header('Location: download.php?file=' . urlencode($lienCv));
+            exit();
         } else {
             echo "Aucun CV trouvé.";
         }
@@ -46,5 +55,3 @@ else {
     echo "<p style='color: red;'>Le formulaire n'a pas été soumis correctement.</p>";
 }
 ?>
-
-<!-- echo '<a href="' . $data['chemin_pdf']. '" target="_blank">Fichier ' . PDF . '</a><br>'; -->
