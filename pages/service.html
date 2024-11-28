@@ -57,24 +57,24 @@
                 <img src="../images/robbie-lens.png" alt="Création de site personnalisé">
                 <h2>Création de sites personnalisés</h2>
                 <div class="Texte-more">
-                    <p id="moreText" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
-                    <button id="viewMoreBtn" onclick="toggleText('1')">Voir plus</button>
+                    <p id="moreText1" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
+                    <button id="viewMoreBtn1" onclick="toggleText('1')">Voir plus</button>
                 </div>
             </div>
             <div class="service-card">
                 <img src="../images/robbie-lens.png" alt="Solutions e-commerce">
                 <h2>Solutions E-commerce</h2>
                 <div class="Texte-more">
-                    <p id="moreText" style="display: none;">Développez votre boutique en ligne avec des fonctionnalités modernes et une expérience utilisateur optimale.</p>
-                    <button id="viewMoreBtn" onclick="toggleText('2')">Voir plus</button>
+                    <p id="moreText2" style="display: none;">Développez votre boutique en ligne avec des fonctionnalités modernes et une expérience utilisateur optimale.</p>
+                    <button id="viewMoreBtn2" onclick="toggleText('2')">Voir plus</button>
                 </div>
             </div>
             <div class="service-card">
                 <img src="../images/robbie-lens.png" alt="Maintenance et support">
                 <h2>Maintenance et Support</h2>
                 <div class="Texte-more">
-                    <p id="moreText" style="display: none;">Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
-                    <button id="viewMoreBtn" onclick="toggleText('3')">Voir plus</button>
+                    <p id="moreText3" style="display: none;">Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
+                    <button id="viewMoreBtn3" onclick="toggleText('3')">Voir plus</button>
                 </div>
             </div>
         </section>
@@ -104,7 +104,7 @@
 
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
-                events: 'fetch_events.php', // Récupère les réservations via PHP
+                events: 'fetch_events.php', 
                 selectable: true,
                 dateClick: function(info) {
                     alert('Date sélectionnée : ' + info.dateStr);

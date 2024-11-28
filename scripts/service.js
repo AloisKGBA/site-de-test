@@ -1,6 +1,5 @@
 function toggleText(texte) {
     var moreText = document.getElementById("moreText"+texte);
-    console.log(moreText)
     var btnText = document.getElementById("viewMoreBtn"+texte);
 
     if (moreText.style.display === "none") {
@@ -11,3 +10,4 @@ function toggleText(texte) {
         btnText.innerHTML = "Voir plus";
     }
 }
+
