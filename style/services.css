@@ -3,6 +3,12 @@
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
 }
+.powr-comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
 
 #viewMoreBtn1,#viewMoreBtn2,#viewMoreBtn3 {
     display: inline-block;
@@ -131,4 +137,93 @@ footer a img[alt="Logo Robbie Lens"] {
         width: 30px;
         height: 30px;
     }
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+form {
+    margin-top: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#commentsDisplay {
+    margin-top: 2rem;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment {
+    display: flex;
+    background: #f1f3f5;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-content h4 {
+    margin: 0 0 0.2rem;
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+.comment-content p {
+    margin: 0.2rem 0;
+    color: #6c757d;
+}
+
+.comment-content small {
+    color: #868e96;
 }

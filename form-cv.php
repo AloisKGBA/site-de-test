@@ -1,7 +1,7 @@
 <?php
 // Connexion à la base de données
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=otawadev', 'root', '');
+    $pdo = new PDO('mysql:host=localhost;dbname=otawadev', 'root', 'root');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo "Erreur de connexion : " . $e->getMessage();

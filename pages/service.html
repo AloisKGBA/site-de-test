@@ -66,6 +66,27 @@
                 </div>
             </div>
         </section>
+        <div class="container">
+            <h1>Section Commentaires</h1>
+            <p>Partagez vos pensées avec nous !</p>
+            <form id="commentForm" method="post" action="../add_comment.php">
+                <div class="form-row">
+                    <input type="text" id="firstName" placeholder="Prénom" required>
+                    <input type="text" id="lastName" placeholder="Nom" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" id="email" placeholder="Adresse Mail" required>
+                    <input type="text" id="subject" placeholder="Objet" required>
+                </div>
+                <textarea id="comment" placeholder="Votre commentaire..." rows="4" required></textarea>
+                <input type="url" id="profilePic" placeholder="URL Photo de Profil (optionnel)">
+                <button type="submit">Poster</button>
+            </form>
+            <section id="commentsDisplay">
+                <h2>Commentaires :</h2>
+                <div class="comments-list"></div>
+            </section> 
+        </div>
     </main>
 
     <footer>
