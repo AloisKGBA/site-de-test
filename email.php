@@ -1,51 +1,46 @@
 <?php
-// Inclure l'autoloader de Composer
+// Inclure l'autoloader généré par Composer
 require __DIR__ . '/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+// Vérifier que le formulaire a été soumis via POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
     $nom = htmlspecialchars($_POST['nom']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Instancier PHPMailer
-    $mail = new PHPMailer(true);
+    // Initialiser PHPMailer
+    $mail = new PHPMailer(true); // IMPORTANT : Cette ligne doit être présente
 
     try {
-        // Configurer le serveur SMTP
+        // Configuration du serveur SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp-relay.brevo.com'; // Utilisez le serveur SMTP de Brevo (anciennement SendinBlue)
+        $mail->Host = 'smtp-relay.brevo.com'; // Serveur SMTP de Brevo
         $mail->SMTPAuth = true;
-        $mail->Username = '80cf15001@smtp-brevo.com'; // Remplacez par votre e-mail Brevo
-        $mail->Password = 'GCsFR2m6B9PLy1tI'; // Remplacez par votre clé API SMTP Brevo
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Username = '80cf15001@smtp-brevo.com'; // Votre e-mail Brevo
+        $mail->Password = 'GCsFR2m6B9PLy1tI'; // Clé API SMTP Brevo
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Utilisation de STARTTLS
         $mail->Port = 587;
 
-        // Configurer l'expéditeur et les destinataires
-        $mail->setFrom('epoudevigne@guardiaschool.fr', 'ottawa dev'); // Expéditeur
-        $mail->addAddress('80cf15001@smtp-brevo.com', 'Brevo'); // Destinataire
+        // Destinataires
+        $mail->setFrom('epoudevigne@guardiaschool.fr', 'ottawa dev');
+        $mail->addAddress('80cf15001@smtp-brevo.com'); // Adresse où recevoir les messages
 
-        // Contenu de l'e-mail
-        $mail->isHTML(true);
+        // Contenu de l’e-mail
+        $mail->isHTML(false);
         $mail->Subject = 'Nouveau message du formulaire de contact';
-        $mail->Body = "
-            <h2>Vous avez reçu un nouveau message :</h2>
-            <p><strong>Nom :</strong> {$nom}</p>
-            <p><strong>Email :</strong> {$email}</p>
-            <p><strong>Message :</strong><br>{$message}</p>
-        ";
+        $mail->Body = "Nom : $nom\nemail : $email\n\nMessage :\n$message";
 
-        // Envoyer l'email
+        // Envoyer l’e-mail
         $mail->send();
         echo "Message envoyé avec succès.";
     } catch (Exception $e) {
-        echo "Une erreur s'est produite. Le message n'a pas été envoyé. Erreur : {$mail->ErrorInfo}";
+        echo "Une erreur s'est produite : {$mail->ErrorInfo}";
     }
 } else {
     echo "Méthode non autorisée.";
 }
 ?>
-
