@@ -122,6 +122,18 @@ nav {
 nav a {
   margin-left: 30px;
 }
+.lien{
+  color: white;
+  padding: 10px 20px;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  background-color: #1f2039;
+  transition: color 200ms;
+}
+.lien:hover{
+  color: #a5b4fc; 
+  background-color: #373855;
+}
 @media screen and (max-width: 996px){
   header nav {
     flex-direction: column;
