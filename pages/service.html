@@ -2,32 +2,44 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" >
+    <meta charset="utf-8">
     <title>Nos services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../style/style.css" rel="stylesheet" >
-    <link href="../style/services.css" rel="stylesheet" >
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/services.css" rel="stylesheet">
     <script type="text/javascript" src="../scripts/service.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="icon" href="../images/Otawa_Dev_Logo.png" />
+    <link rel="icon" href="/images/Otawa_Dev_Logo.png">
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css" rel="stylesheet">
+    <!-- FullCalendar JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <style>
+        #calendar {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav>
             <a href="index.html" class="lien-icone">
-                <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" width="50%" alt="Logo Otawa" >
+                <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" width="50%" alt="Logo Otawa">
             </a>
             <div>
-                <a href="index.html"class="accueil">Accueil</a>
+                <a href="index.html" class="accueil">Accueil</a>
                 <a href="a-propos.html" class="à-porpos">À propos</a>
                 <a href="portfolio.html" class="portfolio">Portfolio</a>
                 <a href="service.html" class="service">Services</a>
             </div>
         </nav>
     </header>
+
     <main>
         <section>
             <h1>Nos services</h1>
@@ -36,53 +48,72 @@
         <section class="intro">
             <div>
                 <h1>Des services sur mesure</h1>
-                <p>Explorez comment nous pouvons transformer vos idées en solutions digitales innovantes et personnalisées.</p>    
+                <p>Explorez comment nous pouvons transformer vos idées en solutions digitales innovantes et personnalisées.</p>
             </div>
-            </section>
-        
+        </section>
+
         <section class="services">
             <div class="service-card">
                 <img src="../images/service/Photo-dev-service.jpg" alt="Création de site personnalisé">
                 <h2>Création de sites personnalisés</h2>
-                    <div class="Texte-more">
-                        <p id="moreText1" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
-                        <button id="viewMoreBtn1" onclick="toggleText('1')">Voir plus</button>
-                    </div>
+                <div class="Texte-more">
+                    <p id="moreText" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
+                    <button id="viewMoreBtn" onclick="toggleText('1')">Voir plus</button>
+                </div>
             </div>
             <div class="service-card">
                 <img src="../images/service/ecommerce-service.png" alt="Solutions e-commerce">
                 <h2>Solutions E-commerce</h2>
                 <div class="Texte-more">
-                    <p id="moreText2" style="display: none;">Développez votre boutique en ligne avec des fonctionnalités modernes et une expérience utilisateur optimale.</p>
-                    <button id="viewMoreBtn2" onclick="toggleText('2')">Voir plus</button>
+                    <p id="moreText" style="display: none;">Développez votre boutique en ligne avec des fonctionnalités modernes et une expérience utilisateur optimale.</p>
+                    <button id="viewMoreBtn" onclick="toggleText('2')">Voir plus</button>
                 </div>
             </div>
             <div class="service-card">
                 <img src="../images/service/maintenance-service.webp" alt="Maintenance et support">
                 <h2>Maintenance et Support</h2>
                 <div class="Texte-more">
-                    <p id="moreText3" style="display: none;">    Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
-                    <button id="viewMoreBtn3" onclick="toggleText('3')">Voir plus</button>
+                    <p id="moreText" style="display: none;">Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
+                    <button id="viewMoreBtn" onclick="toggleText('3')">Voir plus</button>
                 </div>
             </div>
+        </section>
+
+        <section class="calendrier">
+            <h2>Calendrier de Réservation</h2>
+            <div id="calendar"></div>
         </section>
     </main>
 
     <footer>
-        <img
-          class="logo-accueil"
-          src="../images/Otawa_Dev_Logo.png"
-          alt="Logo Ottawa Development"
-        />
+        <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" alt="Logo Ottawa Development">
         <div>
-          <a target="_blank" href="https://x.com/OtawaDev" class="lien-icone">
-            <img src="../images/twitter.png" alt="Logo Twitter" />
-          </a>
-          <a target="_blank" href="https://www.instagram.com/otawadev/?igsh=MWF6dG1hOHh1ejhsaw%3D%3D&utm_source=qr" class="lien-icone">
-            <img src="../images/instagram.png" alt="Logo Instagram" />
-          </a>
+            <a target="_blank" href="https://x.com/OtawaDev" class="lien-icone">
+                <img src="../images/twitter.png" alt="Logo Twitter">
+            </a>
+            <a target="_blank" href="https://www.instagram.com/otawadev/?igsh=MWF6dG1hOHh1ejhsaw%3D%3D&utm_source=qr" class="lien-icone">
+                <img src="../images/instagram.png" alt="Logo Instagram">
+            </a>
         </div>
-      </footer>
+    </footer>
+
+    <!-- Script pour initialiser le calendrier -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: 'fetch_events.php', // Récupère les réservations via PHP
+                selectable: true,
+                dateClick: function(info) {
+                    alert('Date sélectionnée : ' + info.dateStr);
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
 </body>
 
 </html>
