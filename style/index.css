@@ -40,8 +40,6 @@
   background-image: linear-gradient(90deg, #1a1c31 30%, #2f316f 70%);
   display: flex;
   flex-direction: row;
-  height: 600px;
-  align-items: flex-start;
   margin: auto;
   align-items: center;
 }
@@ -181,4 +179,18 @@ textarea{
 }
 #message, #nom,#email{
   color: white;
+}
+@media screen and (max-width: 560px) {
+  .lien-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+  }
 }
