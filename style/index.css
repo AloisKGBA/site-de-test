@@ -180,17 +180,3 @@ textarea{
 #message, #nom,#email{
   color: white;
 }
-@media screen and (max-width: 560px) {
-  .lien-nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: auto;
-  }
-}
