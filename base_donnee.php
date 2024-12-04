@@ -35,3 +35,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "<p style='color: red;'>Le formulaire n'a pas été soumis correctement.</p>";
 }
 ?> -->
+
