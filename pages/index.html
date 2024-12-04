@@ -135,8 +135,7 @@
           Vous pouvez obtenir plus d'informations ou envoyer vos commentaires en
           remplissant la section ci-dessous.
         </h4>
-
-        <form method="post" action="http://localhost/site-de-test/email.php">
+        <form method="post" action="../email.php">
           <div class="form-nom-email">
             <div class="form-column">
               <label for="nom"></label>
@@ -146,6 +145,7 @@
                 name="nom"
                 id="nom"
                 placeholder="Votre nom"
+                required
               />
             </div>
             <div class="form-column">
@@ -156,6 +156,7 @@
                 name="email"
                 id="email"
                 placeholder="Email@exemple.com"
+                required
               />
             </div>
           </div>
@@ -166,6 +167,7 @@
             id="message"
             rows="10"
             placeholder="Votre message"
+            required
           ></textarea>
           <input type="submit" value="ENVOYER" class="cta" />
         </form>
