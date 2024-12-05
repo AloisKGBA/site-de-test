@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prenom = isset($_POST['First_name']) ? trim($_POST['First_name']) : '';
     $nom = isset($_POST['Last_name']) ? trim($_POST['Last_name']) : '';
     $choix = isset($_POST['choix']) ? trim($_POST['choix']) : '';
-    $Date_tel = "2023-09-15";
+    $Date_tel = date('Y-m-d');
     $consent = isset($_POST['consent']) ? true : false;
  
     if (!empty($nom) && !empty($prenom) && !empty($choix)&& !empty($consent)) {

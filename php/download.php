@@ -3,7 +3,7 @@
 if (isset($_GET['file'])) {
     $file = $_GET['file'];
     // Le chemin complet de l'image sur le serveur (assurez-vous que le fichier existe dans ce répertoire)
-    $filePath = 'images/portfolio/' . basename($file);  // Remplacez par le chemin réel
+    $filePath = '../images/portfolio/' . basename($file);  // Remplacez par le chemin réel
     // Vérifiez si le fichier existe sur le serveur
     if (file_exists($filePath)) {
         // Définir les en-têtes pour forcer le téléchargement
