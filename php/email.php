@@ -1,6 +1,6 @@
 <?php
 // Inclure l'autoloader généré par Composer
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
