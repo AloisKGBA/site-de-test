@@ -60,43 +60,6 @@ footer {
  scale: 1.05;
 }
 
-.accueil {
-  color: black;
-  transition: 200ms;
-}
-
-.accueil:hover {
-  color: #a5b4fc;
-  animation-name: fondu;
-  animation-duration: 1s;
-}
-
-.à-propos {
-  color: black;
-  transition: color 200ms;
-}
-.à-propos:hover{
-  color:#a5b4fc;
-}
-
-.portfolio{
-  color: black;
-  transition: color 200ms;
-}
-
-.portfolio:hover{
-  color: #a5b4fc;
-}
-
-.service {
-  color: black;
-  transition: color 200ms;
-}
-
-.service:hover {
-  color: #a5b4fc;
-}
-
 
 .lien-icone {
   margin-left: 20px;

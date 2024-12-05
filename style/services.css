@@ -73,6 +73,8 @@
     color: #555;
 }
 
+/* Section du footer */
+
 
 
 /* Responsive Design */
@@ -112,5 +114,35 @@
         padding: 15px;
     }
 
+<<<<<<< HEAD
  
+=======
+    footer .lien-icone img {
+        width: 30px;
+        height: 30px;
+    }
+    .calendar-header {
+        font-size: 16px;
+    }
+
+    .calendar-dates div {
+        font-size: 12px;
+    }
+    .form-reservation {
+        padding: 15px;
+    }
+
+    .form-reservation h2 {
+        font-size: 1.5em;
+    }
+
+    .form-reservation input,
+    .form-reservation select {
+        font-size: 0.9em;
+    }
+
+    .form-reservation button {
+        font-size: 1em;
+    }
+>>>>>>> ad2a07770e36a5cc371b71706a30f3df36fe0b63
 }

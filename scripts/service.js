@@ -1,6 +1,5 @@
 function toggleText(texte) {
     var moreText = document.getElementById("moreText"+texte);
-    console.log(moreText)
     var btnText = document.getElementById("viewMoreBtn"+texte);
 
     if (moreText.style.display === "none") {
@@ -12,6 +11,7 @@ function toggleText(texte) {
     }
 }
 
+<<<<<<< HEAD
 document.getElementById("commentForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -62,3 +62,6 @@ async function loadComments() {
 
 // Charger les commentaires au démarrage
 loadComments();
+=======
+
+>>>>>>> ad2a07770e36a5cc371b71706a30f3df36fe0b63
