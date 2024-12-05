@@ -1,0 +1,116 @@
+
+}
+
+header .logo {
+    height: 50px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+}
+
+.intro h1 {
+    color: #007BFF;
+    text-align: center;
+}
+
+.intro p {
+    text-align: justify;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#rss-feed {
+    margin-top: 40px;
+}
+
+#rss-feed h2 {
+    text-align: center;
+    color: #007BFF;
+}
+
+.rss-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.rss-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rss-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rss-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.rss-item p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.rss-item .date {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .logo-footer {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rss-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
