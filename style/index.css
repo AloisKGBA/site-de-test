@@ -40,8 +40,6 @@
   background-image: linear-gradient(90deg, #1a1c31 30%, #2f316f 70%);
   display: flex;
   flex-direction: row;
-  height: 600px;
-  align-items: flex-start;
   margin: auto;
   align-items: center;
 }
@@ -85,6 +83,7 @@ form{
   width: 50%;
   color: white;
 }
+
 .form-nom-email{
   display: flex;
   flex-direction:row;

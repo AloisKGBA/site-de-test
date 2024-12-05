@@ -59,6 +59,9 @@ th{
 .equipe div{
   margin-left: 20px;
   margin-right: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .pdp{
   width: 15em;
@@ -93,3 +96,21 @@ h2{
   font-style: italic;
   text-decoration: underline;
 }
+@media  screen and (max-width : 1160px) {
+  body{
+    width: 100%;
+  }
+  .equipe{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 180px 380px;
+  justify-content: center;
+  padding-left: 20px;
+  }
+  .equipe img{
+    grid-row: 2 / 3 ;
+    grid-column: 1 / 2;
+  }
+  
+}
+

@@ -1,0 +1,17 @@
+{
+    "name": "composer/test",
+    "autoload": {
+        "psr-4": {
+            "Composer\\Test\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Poudevigne Evan",
+            "email": "epoudevigne@guardiaschool.fr"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

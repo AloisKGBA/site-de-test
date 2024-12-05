@@ -2,32 +2,106 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf-8" >
+    <meta charset="utf-8">
     <title>Nos services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../style/style.css" rel="stylesheet" >
-    <link href="../style/services.css" rel="stylesheet" >
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/services.css" rel="stylesheet">
     <script type="text/javascript" src="../scripts/service.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="icon" href="../images/Otawa_Dev_Logo.png" />
+    <link rel="icon" href="/images/Otawa_Dev_Logo.png">
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css" rel="stylesheet">
+    <!-- FullCalendar JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+    <style>
+        #calendar {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            color: black;
+        }
+
+        /* Personnalisation du titre de la section Calendrier */
+        .calendrier h2 {
+            color: #1db1a2 !important;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Couleur des numéros de jours */
+        .fc-daygrid-day-number {
+            color: #1db1a2 !important;
+            font-size: 1.2em;
+        }
+
+        /* Couleur de fond et couleur de texte des événements */
+        .fc-event {
+            background-color: #8e44ad !important;
+            color: white !important;
+            border: 1px solid #6c3483 !important;
+            border-radius: 4px;
+        }
+
+        /* Personnaliser le texte des jours dans la grille */
+        .fc-daygrid-day {
+            color: #2c3e50 !important;
+        }
+
+        /* Personnaliser le texte du mois et de l'année dans l'en-tête */
+        .fc-toolbar-title {
+            color: #3498db !important;
+            font-size: 1.5em !important;
+            font-weight: bold;
+        }
+
+        /* Formulaire de réservation */
+        .form-reservation {
+            margin-top: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .form-reservation input,
+        .form-reservation select,
+        .form-reservation button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-reservation button {
+            background-color: #1db1a2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav>
             <a href="index.html" class="lien-icone">
-                <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" width="50%" alt="Logo Otawa" >
+                <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" alt="Logo Robbie Lens" >
             </a>
-            <div>
-                <a href="index.html"class="accueil">Accueil</a>
-                <a href="a-propos.html" class="à-porpos">À propos</a>
-                <a href="portfolio.html" class="portfolio">Portfolio</a>
-                <a href="service.html" class="service">Services</a>
+            <div class="lien-nav">
+                <a href="index.html" class="lien">Accueil</a>
+                <a href="a-propos.html" class="lien">À propos</a>
+                <a href="portfolio.html" class="lien">Portfolio</a>
+                <a href="service.html" class="lien">Services</a>
             </div>
         </nav>
-    </header>
+</header>
+
     <main>
         <section>
             <h1>Nos services</h1>
@@ -36,18 +110,19 @@
         <section class="intro">
             <div>
                 <h1>Des services sur mesure</h1>
-                <p>Explorez comment nous pouvons transformer vos idées en solutions digitales innovantes et personnalisées.</p>    
+                <p>Explorez comment nous pouvons transformer vos idées en solutions digitales innovantes et personnalisées.</p>
             </div>
-            </section>
-        
+        </section>
+
         <section class="services">
+            <!-- Cards des services -->
             <div class="service-card">
                 <img src="../images/service/Photo-dev-service.jpg" alt="Création de site personnalisé">
                 <h2>Création de sites personnalisés</h2>
-                    <div class="Texte-more">
-                        <p id="moreText1" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
-                        <button id="viewMoreBtn1" onclick="toggleText('1')">Voir plus</button>
-                    </div>
+                <div class="Texte-more">
+                    <p id="moreText1" style="display: none;">Nous concevons des sites web uniques qui reflètent l'identité et les besoins de votre entreprise.</p>
+                    <button id="viewMoreBtn1" onclick="toggleText('1')">Voir plus</button>
+                </div>
             </div>
             <div class="service-card">
                 <img src="../images/service/ecommerce-service.png" alt="Solutions e-commerce">
@@ -61,28 +136,183 @@
                 <img src="../images/service/maintenance-service.webp" alt="Maintenance et support">
                 <h2>Maintenance et Support</h2>
                 <div class="Texte-more">
-                    <p id="moreText3" style="display: none;">    Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
+                    <p id="moreText3" style="display: none;">Gardez vos systèmes à jour et performants grâce à notre service de maintenance professionnelle.</p>
                     <button id="viewMoreBtn3" onclick="toggleText('3')">Voir plus</button>
                 </div>
+            </div>
+        </section>
+
+        <section class="calendrier">
+            <h2>Calendrier de Réservation</h2>
+            <div id="calendar"></div>
+        </section>
+
+        <!-- Formulaire de réservation -->
+        <section>
+            <div class="form-reservation">
+                <h2>Réservez votre service</h2>
+                <form id="reservationForm" action="../php/process_reservation.php" method="POST">
+                    <label for="nom">Entrez votre nom :</label>
+                    <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+        
+                    <label for="prenom">Entrez votre prénom :</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
+        
+                    <label for="phone">Entrez votre numéro de téléphone :</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        pattern="\+33[1-9]([0-9]{2}){4}" 
+                        placeholder="+33 X XX XX XX XX" 
+                        required
+                    />
+        
+                    <label for="email">Adresse e-mail :</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="votre.email@example.com" 
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                        required
+                    />
+
+                    <label for="date_debut">Choisissez une date de début :</label>
+                    <input 
+                        type="text" 
+                        name="date_debut" 
+                        id="date_debut" 
+                        placeholder="Sélectionnez une date de début" 
+                        readonly 
+                        required
+                    >
+        
+                    <label for="date_fin">Choisissez une date de fin :</label>
+                    <input 
+                        type="text" 
+                        name="date_fin" 
+                        id="date_fin" 
+                        placeholder="Sélectionnez une date de fin" 
+                        readonly 
+                        required
+                    >
+        
+                    <label for="service">Choisissez un service :</label>
+                    <select name="service" id="service" required>
+                        <option value="" disabled selected>Veuillez sélectionner une date de début et de fin d'abord</option>
+                        <option value="Création de sites personnalisés">Création de site personnalisé</option>
+                        <option value="Solutions E-commerce">Solutions E-commerce</option>
+                        <option value="Maintenance et Support">Maintenance et Support</option>
+                    </select>
+        
+                    <label for="membre_dispo">Voici les membres disponibles pour vous :</label>
+                    <select name="membre_dispo" id="membre_dispo" required>
+                        <option value="" disabled selected>Veuillez d'abord choisir un service</option>
+                    </select>
+        
+                    <button type="submit">Réserver</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <img
-          class="logo-accueil"
-          src="../images/Otawa_Dev_Logo.png"
-          alt="Logo Ottawa Development"
-        />
+        <a href="index.html" class="lien-icone">
+            <img class="logo-accueil" src="../images/Otawa_Dev_Logo.png" alt="Logo Robbie Lens" >
+        </a>
         <div>
-          <a target="_blank" href="https://x.com/OtawaDev" class="lien-icone">
-            <img src="../images/twitter.png" alt="Logo Twitter" />
-          </a>
-          <a target="_blank" href="https://www.instagram.com/otawadev/?igsh=MWF6dG1hOHh1ejhsaw%3D%3D&utm_source=qr" class="lien-icone">
-            <img src="../images/instagram.png" alt="Logo Instagram" />
-          </a>
+            <a target="_blank" href="https://x.com/OtawaDev" class="lien-icone">
+                <img src="../images/twitter.png" alt="Logo Twitter" >
+            </a>
+            <a target="_blank" href="https://www.instagram.com/otawadev/?igsh=MWF6dG1hOHh1ejhsaw%3D%3D&utm_source=qr" class="lien-icone">
+                <img src="../images/instagram.png" alt="Logo Instagram" >
+            </a>
         </div>
-      </footer>
+    </footer>
+
+    <script>
+        document.getElementById('service').addEventListener('change', function () {
+            const service = this.value;
+            const membreDispoSelect = document.getElementById('membre_dispo');
+            const dateDebut = document.getElementById('date_debut').value;
+            const dateFin = document.getElementById('date_fin').value;
+        
+            // Vérifier que les dates sont remplies
+            if (!dateDebut || !dateFin) {
+                alert("Veuillez sélectionner une date de début et de fin avant de choisir un service.");
+                return;
+            }
+            // Réinitialiser les membres disponibles
+            membreDispoSelect.innerHTML = '<option value="" disabled selected>Chargement...</option>';
+        
+            // Requête AJAX pour obtenir les membres disponibles
+            fetch(`../get_membre.php?service=${encodeURIComponent(service)}&date_debut=${encodeURIComponent(dateDebut)}&date_fin=${encodeURIComponent(dateFin)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    // Effacer les options précédentes
+                    membreDispoSelect.innerHTML = '';
+                    
+                    if (data.length > 0) {
+                        // Ajouter les membres disponibles en tant qu'options
+                        data.forEach(membre => {
+                            const option = document.createElement('option');
+                            option.value = membre.ID_membre;
+                            option.textContent = `${membre.Prenom} ${membre.Nom}`;
+                            membreDispoSelect.appendChild(option);
+                        });
+                    } else {
+                        // Aucun membre disponible
+                        membreDispoSelect.innerHTML = '<option value="" disabled>Aucun membre disponible</option>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur lors de la récupération des membres disponibles:', error);
+                    membreDispoSelect.innerHTML = '<option value="" disabled>Erreur lors du chargement</option>';
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let selectingStartDate = true; // Variable pour savoir quel champ on est en train de remplir
+
+            const calendarEl = document.getElementById('calendar');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: '../fetch_events.php', // Cette requête va récupérer les événements réservés depuis la base de données
+                eventContent: function(arg) {
+                    let title = document.createElement('div');
+                    title.innerText = arg.event.title;
+
+                    let description = document.createElement('div');
+                    description.innerText = arg.event.extendedProps.description;
+                    description.style.fontSize = '0.8em'; // Ajuster la taille de la description
+
+                    let container = document.createElement('div');
+                    container.appendChild(title);
+                    container.appendChild(description);
+
+                    return { domNodes: [container] };
+                },
+                selectable: true,
+                dateClick: function (info) {
+                if (selectingStartDate) {
+                    document.getElementById('date_debut').value = info.dateStr;
+                    selectingStartDate = false; // Prochain clic sera pour la date de fin
+                    alert('Date de début sélectionnée. Veuillez sélectionner une date de fin.');
+                } else {
+                    document.getElementById('date_fin').value = info.dateStr;
+                    selectingStartDate = true; // Reset pour le prochain clic
+                    alert('Date de fin sélectionnée.');
+                }
+            }
+        });
+
+            calendar.render();
+        });
+    </script>
 </body>
 
 </html>

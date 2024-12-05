@@ -3,6 +3,12 @@
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
 }
+.powr-comments{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
 
 #viewMoreBtn1,#viewMoreBtn2,#viewMoreBtn3 {
     display: inline-block;
@@ -33,13 +39,13 @@
     gap: 80px;
     padding: 20px;
 }
-
 .service-card {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 300px;;
     text-align: center;
+
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -67,28 +73,9 @@
     color: #555;
 }
 
+/* Section du footer */
 
-footer .lien-icone img {
-    width: 40px; /* Taille des icônes */
-    height: 40px;
-    margin: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
-}
 
-footer .lien-icone img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-footer a {
-    text-decoration: none;
-}
-
-footer a img[alt="Logo Robbie Lens"] {
-    width: 80px; /* Taille du logo principal */
-    margin-bottom: 20px;
-}
 
 /* Responsive Design */
 
@@ -130,5 +117,28 @@ footer a img[alt="Logo Robbie Lens"] {
     footer .lien-icone img {
         width: 30px;
         height: 30px;
+    }
+    .calendar-header {
+        font-size: 16px;
+    }
+
+    .calendar-dates div {
+        font-size: 12px;
+    }
+    .form-reservation {
+        padding: 15px;
+    }
+
+    .form-reservation h2 {
+        font-size: 1.5em;
+    }
+
+    .form-reservation input,
+    .form-reservation select {
+        font-size: 0.9em;
+    }
+
+    .form-reservation button {
+        font-size: 1em;
     }
 }
