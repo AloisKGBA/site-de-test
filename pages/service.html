@@ -247,7 +247,7 @@
             membreDispoSelect.innerHTML = '<option value="" disabled selected>Chargement...</option>';
         
             // Requête AJAX pour obtenir les membres disponibles
-            fetch(`../get_membre.php?service=${encodeURIComponent(service)}&date_debut=${encodeURIComponent(dateDebut)}&date_fin=${encodeURIComponent(dateFin)}`)
+            fetch(`../php/get_membre.php?service=${encodeURIComponent(service)}&date_debut=${encodeURIComponent(dateDebut)}&date_fin=${encodeURIComponent(dateFin)}`)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
@@ -281,7 +281,7 @@
 
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
-                events: '../fetch_events.php', // Cette requête va récupérer les événements réservés depuis la base de données
+                events: '../php/fetch_events.php', // Cette requête va récupérer les événements réservés depuis la base de données
                 eventContent: function(arg) {
                     let title = document.createElement('div');
                     title.innerText = arg.event.title;
