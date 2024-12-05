@@ -60,43 +60,6 @@ footer {
  scale: 1.05;
 }
 
-.accueil {
-  color: black;
-  transition: 200ms;
-}
-
-.accueil:hover {
-  color: #a5b4fc;
-  animation-name: fondu;
-  animation-duration: 1s;
-}
-
-.à-propos {
-  color: black;
-  transition: color 200ms;
-}
-.à-propos:hover{
-  color:#a5b4fc;
-}
-
-.portfolio{
-  color: black;
-  transition: color 200ms;
-}
-
-.portfolio:hover{
-  color: #a5b4fc;
-}
-
-.service {
-  color: black;
-  transition: color 200ms;
-}
-
-.service:hover {
-  color: #a5b4fc;
-}
-
 
 .lien-icone {
   margin-left: 20px;
@@ -121,6 +84,18 @@ nav {
 
 nav a {
   margin-left: 30px;
+}
+.lien{
+  color: white;
+  padding: 10px 20px;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  background-color: #1f2039;
+  transition: color 200ms;
+}
+.lien:hover{
+  color: #a5b4fc; 
+  background-color: #373855;
 }
 @media screen and (max-width: 996px){
   header nav {

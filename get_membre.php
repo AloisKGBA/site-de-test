@@ -1,32 +1,47 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-ob_clean(); // Supprimer les espaces ou contenu précédent
-// Connexion à la base de données
+ob_clean(); // Supprime tout contenu précédemment envoyé
 
 try {
     $pdo = new PDO("mysql:host=localhost;dbname=otawadev;charset=utf8", 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die(json_encode(["error" => "Erreur de connexion à la base de données"]));
+    echo json_encode(["error" => "Erreur de connexion à la base de données"]);
+    exit;
 }
 
-// Vérifier si le service est passé en paramètre
-if (isset($_GET['service'])) {
-    $service = htmlspecialchars($_GET['service']); // Protéger contre les attaques XSS
+// Vérifier les paramètres GET
+if (isset($_GET['service'], $_GET['date_debut'], $_GET['date_fin'])) {
+    $service = htmlspecialchars($_GET['service']);
+    $date_debut = htmlspecialchars($_GET['date_debut']);
+    $date_fin = htmlspecialchars($_GET['date_fin']);
 
-    // Requête pour récupérer les membres correspondants
-    $query = "SELECT ID_membre, Nom, Prenom FROM competence WHERE Comp_service = :service";
+    $query = "
+        SELECT ID_membre, Nom, Prenom 
+        FROM competence 
+        WHERE Comp_service = :service
+        AND ID_membre NOT IN (
+            SELECT ID_Membre_Recense 
+            FROM reservation 
+            WHERE 
+                (:date_debut BETWEEN Date_debut AND Date_fin OR 
+                 :date_fin BETWEEN Date_debut AND Date_fin OR
+                 Date_debut BETWEEN :date_debut AND :date_fin)
+        )
+    ";
+
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':service', $service, PDO::PARAM_STR);
+    $stmt->bindParam(':service', $service);
+    $stmt->bindParam(':date_debut', $date_debut);
+    $stmt->bindParam(':date_fin', $date_fin);
     $stmt->execute();
 
-    // Renvoyer les résultats en JSON
     $membres = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($membres);
     exit;
 }
 
-// Si aucun service n'est fourni, renvoyer une erreur
-echo json_encode(["error" => "Service non spécifié"]);
+// Paramètres manquants
+echo json_encode(["error" => "Paramètres manquants"]);
 exit;
 ?>

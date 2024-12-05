@@ -91,6 +91,7 @@ footer a img[alt="Logo Robbie Lens"] {
     margin-bottom: 20px;
 }
 
+
 /* Responsive Design */
 
 @media (min-width: 1024px) {
@@ -138,5 +139,21 @@ footer a img[alt="Logo Robbie Lens"] {
 
     .calendar-dates div {
         font-size: 12px;
+    }
+    .form-reservation {
+        padding: 15px;
+    }
+
+    .form-reservation h2 {
+        font-size: 1.5em;
+    }
+
+    .form-reservation input,
+    .form-reservation select {
+        font-size: 0.9em;
+    }
+
+    .form-reservation button {
+        font-size: 1em;
     }
 }

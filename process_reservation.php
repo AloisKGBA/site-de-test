@@ -19,7 +19,7 @@ $service = htmlspecialchars(trim($_POST['service']));
 $membre_dispo = htmlspecialchars(trim($_POST['membre_dispo'])); 
 
 // Insertion dans la base de données
-$sql = "INSERT INTO reservation (Nom, Prenom, Telephone, Mail, Date_debut, Date_fin, Service, ID_Membre_Recense) 
+$sql = "INSERT INTO reservation (Nom_Client, Prenom_Client, Telephone, Mail, Date_debut, Date_fin, Service, ID_Membre_Recense) 
         VALUES (:nom, :prenom, :phone, :email, :date_debut, :date_fin, :service, :membre_dispo)";
 
 $stmt = $pdo->prepare($sql);
