@@ -83,6 +83,7 @@ form{
   width: 50%;
   color: white;
 }
+
 .form-nom-email{
   display: flex;
   flex-direction:row;

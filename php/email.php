@@ -7,10 +7,15 @@ use PHPMailer\PHPMailer\Exception;
 
 // Vérifier que le formulaire a été soumis via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
+    // Récupérer les données du formulaire et vérifier qu'elles ne sont pas vides
     $nom = htmlspecialchars($_POST['nom']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
+
+    if (empty($nom) || empty($email) || empty($message)) {
+        echo "Tous les champs doivent être remplis.";
+        exit; // Arrêter l'exécution si des champs sont vides
+    }
 
     // Initialiser PHPMailer
     $mail = new PHPMailer(true); // IMPORTANT : Cette ligne doit être présente
@@ -32,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Contenu de l’e-mail
         $mail->isHTML(false);
         $mail->Subject = 'Nouveau message du formulaire de contact';
-        $mail->Body = "Nom : $nom\nemail : $email\n\nMessage :\n$message";
+        $mail->Body = "Nom : $nom\nEmail : $email\n\nMessage :\n$message";
 
         // Envoyer l’e-mail
         $mail->send();
